@@ -1,0 +1,95 @@
+/*
+/* Created by Filipe Pina
+ * Specific styles of signin, register, component
+ */
+/*
+ * General styles
+ */
+
+body, html{
+     height: 100%;
+  background-repeat: no-repeat;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#8fd0ea+0,5ac3e2+50,dc9dea+100 */
+background: rgb(143,208,234); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(143,208,234,1) 0%, rgba(90,195,226,1) 50%, rgba(220,157,234,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(143,208,234,1) 0%,rgba(90,195,226,1) 50%,rgba(220,157,234,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(143,208,234,1) 0%,rgba(90,195,226,1) 50%,rgba(220,157,234,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8fd0ea', endColorstr='#dc9dea',GradientType=0 ); /* IE6-9 */
+}
+
+.main{
+  margin-top: 70px;
+}
+
+h1.title { 
+  font-size: 50px;
+  font-family: 'Passion One', cursive; 
+  font-weight: 400; 
+}
+
+hr{
+  width: 10%;
+  color: #fff;
+}
+
+.form-group{
+  margin-bottom: 15px;
+}
+
+label{
+  margin-bottom: 15px;
+}
+
+input,
+input::-webkit-input-placeholder {
+    font-size: 11px;
+    padding-top: 2px;
+}
+
+.main-login{
+  background-color: #E9F4F2; /* white box color*/
+    /* shadows and rounded borders */
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 7px;
+    border-radius: 10px; /* white box radius*/
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+
+}
+
+.main-center{
+  margin-top: 30px;
+  margin: 0 auto;
+  max-width: 330px;
+    padding: 40px 40px;
+
+}
+
+.login-button{
+  background: #7ad97e;
+  background-image: -webkit-linear-gradient(top, #7ad97e, #008a00);
+  background-image: -moz-linear-gradient(top, #7ad97e, #008a00);
+  background-image: -ms-linear-gradient(top, #7ad97e, #008a00);
+  background-image: -o-linear-gradient(top, #7ad97e, #008a00);
+  background-image: linear-gradient(to bottom, #7ad97e, #008a00);
+  -webkit-border-radius: 7;
+  -moz-border-radius: 7;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 1px 3px #666666;
+  -moz-box-shadow: 0px 1px 3px #666666;
+  box-shadow: 0px 1px 3px #666666;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 12px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+}
+}
+
+.login-register{
+  background: #7ad97e;
+  font-size: 11px;
+  text-align: center;
+}
