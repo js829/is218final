@@ -4,23 +4,25 @@
 </head>
 <body>
 
+<?php include ('view/header.php'); ?> 
+
 <?php
 	include_once 'database.php';
 	
 
 	//Let's make sure the correct data is received. 
-	if (!isset($_POST['email']) || !isset($_POST['fname']) || !isset($_POST['lname'])){
+	if (!isset($_REQUEST['email']) || !isset($_REQUEST['fname']) || !isset($_REQUEST['lname'])){
 		header('HTTP/1.1 500 Internal Server Error');
-		exit("ERROR: There was an error writing to the database. Some required data was missing.");
+		exit("ERROR: There was an error writing to the database. Some required data was blank.");
 	}
-	else if ($_POST['email'] == null || $_POST['fname'] == null || $_POST['lname'] == null){
+	else if ($_REQUEST['email'] == null || $_REQUEST['fname'] == null || $_REQUEST['lname'] == null){
 		header('HTTP/1.1 500 Internal Server Error');
-		exit("ERROR: There was an error writing to the database. Some required data was blank.<br><a href='index.php'>Go back to main page.</a>");
+		exit("ERROR: There was an error writing to the database. Some required data was blank.<br><a href='settings.php'>Go back to user settings page.</a>");
 	}
 
-	$useremail = $_POST['email'];
-	$userfname = $_POST['fname'];
-	$userlname = $_POST['lname'];
+	$useremail = $_REQUEST['email'];
+	$userfname = $_REQUEST['fname'];
+	$userlname = $_REQUEST['lname'];
 
 	//Let's make sure the e-mail exists (so we can modify it).
 	$sql = 'SELECT * FROM accounts WHERE email="'.$useremail.'"';
@@ -29,14 +31,13 @@
 	//If the following line has results (the array length is more than 0), that means data/e-mail exists.
 	if (count($results) == 0){
 		header('HTTP/1.1 500 Internal Server Error');
-		exit("ERROR: The e-mail address doesn't exist.<br><a href='index.php'>Go back to main page.</a>");
+		exit("ERROR: The e-mail address does not exist.<br><a href='settings.php'>Go back to user settings page.</a>");
 	}
 
 	//Let's update the entry
 	$sql = 'UPDATE accounts SET fname="'.$userfname.'", lname="'.$userlname.'" WHERE email ="'.$useremail.'"';
 	$results = runQuery($sql);
 
-	
 	echo "User Updated.";
 
 ?>
