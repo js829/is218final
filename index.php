@@ -22,11 +22,11 @@
                     <form class="form-horizontal" method="post" action="#">
                         
                         <center><div class="form-group">
-                            <label for="email" class="cols-sm-2 control-label"><strong>Username:</strong></label>
+                            <label for="email" class="cols-sm-2 control-label"><strong>Email:</strong></label>
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                                    <input type="email" class="form-control" name="email" id="email"  placeholder="Enter your Username"/></center>
+                                    <input type="email" class="form-control" name="email" id="email"  placeholder="Enter your email address"/></center>
                                 <br>
                         <center><div class="form-group">
                             <label for="password" class="cols-sm-2 control-label"><strong>Password:</strong></label>

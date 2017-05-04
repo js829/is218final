@@ -20,7 +20,7 @@
 
 						
 						<center><div class="form-group">
-							<label for="email" class="cols-sm-2 control-label" required><strong>Username:</strong></label>
+							<label for="email" class="cols-sm-2 control-label" required><strong>Email:</strong></label>
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
